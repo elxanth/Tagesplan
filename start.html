@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>portfolio</title>#
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content=""IE=edge> 
         <meta name="viewport" content=""width=device-width, height=device-height, initial-scale="1.0">
         <link href="style/style.css" rel="stylesheet">
+      
+        
     </head>
     <body>
         <header>
-            <nav></nav>
+            <h1>day - plan</h1>
+            <h3>tägliche Hilfe für Selbstoptimierung</h3>
         </header>
-        
+
         <main>
-            <article></article>
+            <script src="script.js"></script>
+            
+                <div class="containerMessages">
+                    
+                    <div class="Messages">
+                        <div class="buttons">
+                        <button id="more" onclick="generateMessage()">Ich will mehr tun.</button>
+                        <button id="add" onclick="addToPlan()">Zur Agenda hinzufügen</button>
+                        </div>
+                        <p id="output">Hier steht deine to-Do.</p>
+                        
+                    </div>
+                </div>
+                <div class="plan">
+                    <h3>Das ist der Plan für heute:</h3>
+                    <ol id="list">
+                    </ol>
+                </div>
+            
         </main>
 
         <footer>

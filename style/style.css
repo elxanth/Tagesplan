@@ -3,17 +3,61 @@
 }
 
 header {
+    justify-content: center;
+    padding: 20px;
+}
+header h1 {
+  
+    width: 20%;
+
+    margin: auto;
+    padding: 10px;
+    text-align: center;
 
 }
-
-nav {
-
+header h3 {
+    width: 50%;
+   
+    margin: auto;
+    padding: 10px;
+    text-align: center;
 }
-
 main {
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    gap: 5px;
+    
 }
 
-footer{
+.containerMessages {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
     
+
+}
+button {
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#more:hover {
+    background-color:rgb(58, 99, 99);
+    color:antiquewhite;
+
+}
+#add:hover {
+    background-color:rgb(131, 91, 26);
+    color:antiquewhite;
+}
+#output {
+    border: solid 2px rgb(58, 99, 99);
+    padding:20px;
+    color:rgb(58, 99, 99)
+}
+.plan {
+    grid-row: 3 / 4;
+    grid-column: 2 / 4;
+    margin-top: 50px;
 }
