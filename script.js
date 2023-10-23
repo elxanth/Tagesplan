@@ -1,6 +1,6 @@
 // message components: start // adverb // verb
 
-let anfänge = ["Heute solltest du ", "Was heute wirklich ansteht, ist ", "Du solltest auf keinen Fall ", "Du könntest heute ", "Wirkkich wichtig ist doch nur ", "Denk heute daran: "]
+let anfänge = ["Heute solltest du ", "Was heute wirklich ansteht, ist ", "Du solltest auf keinen Fall ", "Du könntest heute ", "Wirklich wichtig ist doch nur ", "Denk heute daran: "]
 
 let adverbiale = ["mit großem Enthusiasmus, den das Universum für dich bereithält ", "widerwillig ", "erhobenen Hauptes ", "mit einer Scheiß-drauf-attitüde ", "glücklich ", "gesenkten Hauptes ", "flussaufwärts "];
 
@@ -17,14 +17,14 @@ const generateMessage = () => {
     //random aktivität
     let randomAktivität = aktivitäten[Math.floor(Math.random() * aktivitäten.length)]
 
+    document.getElementById("add").innerHTML = "Zum Tagesplan hinzufügen"
+
     toDo = randomAnfang + randomAdverbial + randomAktivität;
     shortToDo = randomAdverbial + randomAktivität;
     document.getElementById("output").textContent = toDo;
 
-   if (document.getElementById("add").onclick) {
-        
-      }
-
+   document.getElementById("add").addEventListener("click", addToPlan);
+  
 }
 
 const addToPlan = () => {
@@ -33,9 +33,8 @@ const addToPlan = () => {
   
         li.appendChild(document.createTextNode(shortToDo));
         ol.appendChild(li);
+        document.getElementById("add").removeEventListener("click", addToPlan);
+        document.getElementById("add").innerHTML = "hinzugefügt"
+
 }
 
-
-const addToAgenda = () =>{
-    
-}
